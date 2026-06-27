@@ -71,15 +71,18 @@ public struct DicyaninGrabSystem: System {
         let objMatrix = object.transformMatrix(relativeTo: nil)
         let grabPointWorld = (objMatrix * SIMD4<Float>(grab.collisionShapeOffset, 1)).xyz
 
-        var best: (Entity, Float)?
-        for gr in grabbers where gr.comp.isGrabbing && gr.comp.heldEntityID == nil {
-            let d = simd_distance(gr.anchorWorld, grabPointWorld)
-            if d <= grab.grabRadius, best == nil || d < best!.1 {
-                best = (gr.entity, d)
-            }
+        // Two-sphere overlap: hand collision radius + object grab radius.
+        let candidates = grabbers.map {
+            (anchor: $0.anchorWorld,
+             radius: $0.comp.grabRadius,
+             available: $0.comp.isGrabbing && $0.comp.heldEntityID == nil)
         }
-
-        guard let (hand, _) = best else { return }
+        guard let idx = GrabMath.nearestLatchIndex(
+            candidates: candidates,
+            grabPoint: grabPointWorld,
+            objectRadius: grab.grabRadius
+        ) else { return }
+        let hand = grabbers[idx].entity
 
         grab.isGrabbed = true
         grab.grabbingHandID = hand.id
@@ -124,13 +127,12 @@ public struct DicyaninGrabSystem: System {
         let targetPos = hand.anchorWorld + hand.rotWorld.act(grab.grabOffset)
 
         // Weighty follow via per-frame lerp/slerp.
-        let t = simd_clamp(grab.followSmoothing, 0, 1)
         let current = object.transformMatrix(relativeTo: nil)
-        let curPos = current.columns.3.xyz
-        let curRot = simd_quatf(current)
-
-        let newPos = simd_mix(curPos, targetPos, SIMD3<Float>(repeating: t))
-        let newRot = simd_slerp(curRot, targetRot, t)
+        let (newPos, newRot) = GrabMath.smoothedPose(
+            current: (current.columns.3.xyz, simd_quatf(current)),
+            target: (targetPos, targetRot),
+            smoothing: grab.followSmoothing
+        )
 
         object.setPosition(newPos, relativeTo: nil)
         object.setOrientation(newRot, relativeTo: nil)
@@ -147,7 +149,7 @@ public struct DicyaninGrabSystem: System {
         grab: inout DicyaninGrabbableComponent,
         hand: (entity: Entity, comp: DicyaninGrabberComponent, anchorWorld: SIMD3<Float>, rotWorld: simd_quatf)?
     ) {
-        let (linVel, angVel) = estimateVelocity(grab.velocitySamples)
+        let (linVel, angVel) = GrabMath.estimateVelocity(grab.velocitySamples)
         let m = object.transformMatrix(relativeTo: nil)
         let ctx = ReleaseContext(
             worldPosition: m.columns.3.xyz,
@@ -201,27 +203,6 @@ public struct DicyaninGrabSystem: System {
         object.components.set(motion)
     }
 
-    // MARK: - Velocity estimation
-
-    private func estimateVelocity(_ samples: [VelocitySample]) -> (SIMD3<Float>, SIMD3<Float>) {
-        guard samples.count >= 2 else { return (.zero, .zero) }
-        let a = samples[samples.count - 2]
-        let b = samples[samples.count - 1]
-        let dt = Float(max(b.time - a.time, 1e-4))
-        let lin = (b.position - a.position) / dt
-
-        // Angular velocity from quaternion delta.
-        let dq = b.rotation * a.rotation.inverse
-        var axis = SIMD3<Float>(dq.imag)
-        let len = simd_length(axis)
-        var ang = SIMD3<Float>.zero
-        if len > 1e-5 {
-            axis /= len
-            let angle = 2 * atan2(len, dq.real)
-            ang = axis * (angle / dt)
-        }
-        return (lin, ang)
-    }
 }
 
 // MARK: - Helpers

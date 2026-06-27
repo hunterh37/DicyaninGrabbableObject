@@ -23,6 +23,12 @@ public struct DicyaninGrabberComponent: Component {
     /// usually the center of the palm or between thumb and index.
     public var anchorOffset: SIMD3<Float>
 
+    /// Radius of this hand's grab collision sphere (meters), centered on the
+    /// anchor point. A larger value makes the hand "reach" further when latching:
+    /// an object latches when the distance between this hand's anchor and the
+    /// object's grab point is within `grabRadius + object.grabRadius`.
+    public var grabRadius: Float
+
     /// Whether the grab gesture (e.g. pinch / fist) is currently active.
     /// Set this from your gesture / hand-tracking code each frame.
     public var isGrabbing: Bool
@@ -33,10 +39,12 @@ public struct DicyaninGrabberComponent: Component {
     public init(
         chirality: Chirality = .either,
         anchorOffset: SIMD3<Float> = .zero,
+        grabRadius: Float = 0.04,
         isGrabbing: Bool = false
     ) {
         self.chirality = chirality
         self.anchorOffset = anchorOffset
+        self.grabRadius = grabRadius
         self.isGrabbing = isGrabbing
     }
 }
