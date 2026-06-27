@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E111811798006252D13D654 /* DicyaninGrabbableObject in Frameworks */ = {isa = PBXBuildFile; productRef = 680D8C93C1E24F1C4CD1913C /* DicyaninGrabbableObject */; };
+		22A235A913084B43B32199F7 /* SpatulaPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A013A5AFD059829D8E611190 /* SpatulaPreviewView.swift */; };
+		3C8AB1363DA1C36FF3444B53 /* ControlPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414DFC604ECF6DC67088ADC3 /* ControlPanelView.swift */; };
+		779ADCCACE25669D4038638E /* GrabbableShowcaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A2D28A3C7038D178605F93 /* GrabbableShowcaseApp.swift */; };
+		A3BA4105E04410E449BC1FB1 /* DemoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC00E037CA71076E1875E37 /* DemoFactory.swift */; };
+		AF806561C3F55026C4159957 /* DicyaninMockHandTracking in Frameworks */ = {isa = PBXBuildFile; productRef = 8D3D78B9F7C7B916FAE20E29 /* DicyaninMockHandTracking */; };
+		C659130749DA01535F1CA90D /* ShowcaseSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A5F17EB9BB6CB1681354D3 /* ShowcaseSettings.swift */; };
+		DFBDA1D27C7F25A6CA25730F /* ShowcaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D3799C4E191360B1041CE8 /* ShowcaseView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		21A5F17EB9BB6CB1681354D3 /* ShowcaseSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseSettings.swift; sourceTree = "<group>"; };
+		414DFC604ECF6DC67088ADC3 /* ControlPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelView.swift; sourceTree = "<group>"; };
+		79E0A06BCF6B60D5E0408F84 /* DicyaninGrabbableObject */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DicyaninGrabbableObject; path = ../..; sourceTree = SOURCE_ROOT; };
+		8F538E42BE90B5A88A769AAB /* DicyaninMockHandTracking */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DicyaninMockHandTracking; path = ../../../DicyaninMockHandTracking; sourceTree = SOURCE_ROOT; };
+		95A2D28A3C7038D178605F93 /* GrabbableShowcaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrabbableShowcaseApp.swift; sourceTree = "<group>"; };
+		97D3799C4E191360B1041CE8 /* ShowcaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseView.swift; sourceTree = "<group>"; };
+		9AC00E037CA71076E1875E37 /* DemoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoFactory.swift; sourceTree = "<group>"; };
+		A013A5AFD059829D8E611190 /* SpatulaPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatulaPreviewView.swift; sourceTree = "<group>"; };
+		CDEBA2024B59FF2676C131C1 /* GrabbableShowcase.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GrabbableShowcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F38D8B0619CB2CCFFA719FF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D0BCC39C95AEAC2019A5EBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E111811798006252D13D654 /* DicyaninGrabbableObject in Frameworks */,
+				AF806561C3F55026C4159957 /* DicyaninMockHandTracking in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2023CAA11AB4C6105D79B4E0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				414DFC604ECF6DC67088ADC3 /* ControlPanelView.swift */,
+				9AC00E037CA71076E1875E37 /* DemoFactory.swift */,
+				95A2D28A3C7038D178605F93 /* GrabbableShowcaseApp.swift */,
+				F38D8B0619CB2CCFFA719FF6 /* Info.plist */,
+				21A5F17EB9BB6CB1681354D3 /* ShowcaseSettings.swift */,
+				97D3799C4E191360B1041CE8 /* ShowcaseView.swift */,
+				A013A5AFD059829D8E611190 /* SpatulaPreviewView.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		74EF853BDF7C519C5E453C43 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				79E0A06BCF6B60D5E0408F84 /* DicyaninGrabbableObject */,
+				8F538E42BE90B5A88A769AAB /* DicyaninMockHandTracking */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		8E22D4DBCA0A48EAC0F43071 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDEBA2024B59FF2676C131C1 /* GrabbableShowcase.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1B6F26E24CD1FA559F1F8B1 = {
+			isa = PBXGroup;
+			children = (
+				74EF853BDF7C519C5E453C43 /* Packages */,
+				2023CAA11AB4C6105D79B4E0 /* Sources */,
+				8E22D4DBCA0A48EAC0F43071 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D775B6D9C06779C11F8E09B7 /* GrabbableShowcase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD667DFA44A11022BD4886F3 /* Build configuration list for PBXNativeTarget "GrabbableShowcase" */;
+			buildPhases = (
+				F071F8FB59B75F6DD8F2F1DA /* Sources */,
+				3D0BCC39C95AEAC2019A5EBB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GrabbableShowcase;
+			packageProductDependencies = (
+				680D8C93C1E24F1C4CD1913C /* DicyaninGrabbableObject */,
+				8D3D78B9F7C7B916FAE20E29 /* DicyaninMockHandTracking */,
+			);
+			productName = GrabbableShowcase;
+			productReference = CDEBA2024B59FF2676C131C1 /* GrabbableShowcase.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		318AB54957F4FC06227DD15A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 28507C357D4DAA3979E68601 /* Build configuration list for PBXProject "GrabbableShowcase" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = B1B6F26E24CD1FA559F1F8B1;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D0BBD63FE3F627842B03E18E /* XCLocalSwiftPackageReference "../.." */,
+				E7C924721F0A108A9164D650 /* XCLocalSwiftPackageReference "../../../DicyaninMockHandTracking" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8E22D4DBCA0A48EAC0F43071 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D775B6D9C06779C11F8E09B7 /* GrabbableShowcase */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F071F8FB59B75F6DD8F2F1DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8AB1363DA1C36FF3444B53 /* ControlPanelView.swift in Sources */,
+				A3BA4105E04410E449BC1FB1 /* DemoFactory.swift in Sources */,
+				779ADCCACE25669D4038638E /* GrabbableShowcaseApp.swift in Sources */,
+				C659130749DA01535F1CA90D /* ShowcaseSettings.swift in Sources */,
+				DFBDA1D27C7F25A6CA25730F /* ShowcaseView.swift in Sources */,
+				22A235A913084B43B32199F7 /* SpatulaPreviewView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		82F428DD4DA35A6F3F4E8C79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dicyanin.GrabbableShowcase;
+				SDKROOT = xros;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		B56403FD12EE08CB771843D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		B7B656ADCF21C0BF77477E5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		F0FB596EA10F8A0230C6BE7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dicyanin.GrabbableShowcase;
+				SDKROOT = xros;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28507C357D4DAA3979E68601 /* Build configuration list for PBXProject "GrabbableShowcase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B56403FD12EE08CB771843D8 /* Debug */,
+				B7B656ADCF21C0BF77477E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BD667DFA44A11022BD4886F3 /* Build configuration list for PBXNativeTarget "GrabbableShowcase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FB596EA10F8A0230C6BE7A /* Debug */,
+				82F428DD4DA35A6F3F4E8C79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		D0BBD63FE3F627842B03E18E /* XCLocalSwiftPackageReference "../.." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../..;
+		};
+		E7C924721F0A108A9164D650 /* XCLocalSwiftPackageReference "../../../DicyaninMockHandTracking" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../../DicyaninMockHandTracking;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		680D8C93C1E24F1C4CD1913C /* DicyaninGrabbableObject */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DicyaninGrabbableObject;
+		};
+		8D3D78B9F7C7B916FAE20E29 /* DicyaninMockHandTracking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DicyaninMockHandTracking;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 318AB54957F4FC06227DD15A /* Project object */;
+}

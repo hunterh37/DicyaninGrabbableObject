@@ -1,0 +1,41 @@
+name: GrabbableShowcase
+options:
+  bundleIdPrefix: com.dicyanin
+  deploymentTarget:
+    visionOS: "2.0"
+  createIntermediateGroups: true
+
+packages:
+  DicyaninGrabbableObject:
+    # The package this example showcases (two dirs up).
+    path: ../..
+  DicyaninMockHandTracking:
+    # Sibling package: on-screen joysticks + pinch so this runs in the Simulator.
+    path: ../../../DicyaninMockHandTracking
+
+targets:
+  GrabbableShowcase:
+    type: application
+    platform: visionOS
+    deploymentTarget: "2.0"
+    sources:
+      - Sources
+    dependencies:
+      - package: DicyaninGrabbableObject
+      - package: DicyaninMockHandTracking
+        product: DicyaninMockHandTracking
+    info:
+      path: Sources/Info.plist
+      properties:
+        CFBundleDisplayName: Grabbable Showcase
+        UIApplicationSceneManifest:
+          UIApplicationPreferredDefaultSceneSessionRole: UIWindowSceneSessionRoleApplication
+          UISceneConfigurations: {}
+        UILaunchScreen: {}
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.dicyanin.GrabbableShowcase
+        GENERATE_INFOPLIST_FILE: NO
+        SWIFT_VERSION: "6.0"
+        TARGETED_DEVICE_FAMILY: "7"
+        ENABLE_PREVIEWS: YES
