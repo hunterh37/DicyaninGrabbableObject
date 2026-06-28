@@ -1,0 +1,42 @@
+name: GloveGrabDemo
+options:
+  bundleIdPrefix: com.dicyanin
+  deploymentTarget:
+    visionOS: "2.0"
+  createIntermediateGroups: true
+
+packages:
+  DicyaninGrabbableObject:
+    # The package this example showcases (two dirs up).
+    path: ../..
+  DicyaninMockHandTracking:
+    # Sibling package: mock hand tracking + the rigged glove USDZ hands so this
+    # runs in the Simulator with a visible glove mesh.
+    path: ../../../DicyaninMockHandTracking
+
+targets:
+  GloveGrabDemo:
+    type: application
+    platform: visionOS
+    deploymentTarget: "2.0"
+    sources:
+      - Sources
+    dependencies:
+      - package: DicyaninGrabbableObject
+      - package: DicyaninMockHandTracking
+        product: DicyaninHandGlove
+    info:
+      path: Sources/Info.plist
+      properties:
+        CFBundleDisplayName: Glove Grab Demo
+        UIApplicationSceneManifest:
+          UIApplicationPreferredDefaultSceneSessionRole: UIWindowSceneSessionRoleApplication
+          UISceneConfigurations: {}
+        UILaunchScreen: {}
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.dicyanin.GloveGrabDemo
+        GENERATE_INFOPLIST_FILE: NO
+        SWIFT_VERSION: "6.0"
+        TARGETED_DEVICE_FAMILY: "7"
+        ENABLE_PREVIEWS: YES
